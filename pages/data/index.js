@@ -25,3 +25,17 @@ export const topbarContents = [
   },
 ];
 
+export const heroProduct = [
+  {
+    title: "Macbook M1 Pro",
+    img: "/Macbook.png",
+  },
+  {
+    title: "iPhone 14 Pro Max",
+    img: "/iphone-hero.png",
+  },
+  {
+    title: "iPad",
+    img: "/Ipad.png",
+  },
+];

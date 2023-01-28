@@ -26,13 +26,13 @@ const Navbar = ({ dark, setDark, handleDark }) => {
           </Link>
         </div>
         <div className="flex text-3xl  ">
-          <Link href="/content/search" className="mx-3 hidden md:block">
+          <Link href="/content/sercha" className="hover:text-4xl transition-all mx-3 hidden md:block">
             <HiSearch />
           </Link>
-          <Link href="/content/shopping" className="mx-3 hidden md:block">
+          <Link href="/content/shopping" className="hover:text-4xl transition-all mx-3 hidden md:block">
             <AiOutlineShoppingCart />
           </Link>
-          <Link href="/account/login" className="mx-3 hidden md:block">
+          <Link href="/account/login" className="hover:text-4xl transition-all mx-3 hidden md:block">
             <BsFillPersonFill />
           </Link>
           <div className="md:hidden cursor-pointer">{dark ? <BsFillSunFill onClick={handleDark} /> : <BsFillMoonFill onClick={handleDark} />}</div>

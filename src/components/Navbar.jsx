@@ -1,22 +1,34 @@
-import { useState } from "react";
-import { topbarContents } from "../data";
+import { useEffect, useState } from "react";
+import { topbarContents } from "../data/index";
 import Link from "next/link";
 import { HiBars3BottomLeft } from "react-icons/hi2";
 import { HiSearch } from "react-icons/hi";
 import { AiOutlineShoppingCart, AiOutlineClose } from "react-icons/ai";
 import { BsFillPersonFill, BsFillMoonFill, BsFillSunFill } from "react-icons/bs";
-
+const scrolledClass = "fixed top-0 z-10 bg-white  dark:bg-black ";
+const unScrolledClass = "relative md:mt-5";
 const Navbar = ({ dark, setDark, handleDark }) => {
   const [offCanvas, setOffCanvas] = useState(false);
+  const [scroll, setScroll] = useState(false);
   const handleOffCanvas = () => {
     setOffCanvas((prev) => !prev);
   };
   const handleCloseOffcanvas = () => {
     setOffCanvas((prev) => !prev);
   };
+  useEffect(() => {
+    const scrolling = () => {
+      if (scrollY > 30) {
+        return setScroll(true);
+      }
+      return setScroll(false);
+    };
+    window.addEventListener("scroll", scrolling);
+  }, [scroll]);
+
   return (
-    <div className=" flex justify-center md:mt-5 shadow-md md:shadow-none md:border-0 dark:text-white">
-      <div className="w-full md:w-10/12 relative pb-3 flex justify-between py-4 md:border-b-4 md:border-b-black md:dark:border-b-white mx-4  items-center">
+    <div className={` flex justify-center  shadow-md md:shadow-none md:border-0 dark:text-white transition-all ${scroll ? scrolledClass : unScrolledClass} w-full`}>
+      <div className={`w-full  md:w-10/12  pb-3 flex justify-between py-4 md:border-b-4 md:border-b-black md:dark:border-b-white mx-4  items-center`}>
         <div className="text-4xl md:hidden cursor-pointer ">
           <HiBars3BottomLeft onClick={handleOffCanvas} />
         </div>
@@ -39,7 +51,7 @@ const Navbar = ({ dark, setDark, handleDark }) => {
         </div>
       </div>
 
-      <div className={`absolute top-0 ${offCanvas ? "-translate-x-[15%] " : "-translate-x-[999px]"} w-4/5 md:hidden bg-white dark:bg-black shadow-lg h-full transition-all p-2`}>
+      <div className={`absolute top-0 ${offCanvas ? "-translate-x-[15%] " : "-translate-x-[999px]"} w-4/5 md:hidden bg-white dark:bg-black shadow-lg min-h-screen transition-all p-2 z-10`}>
         <div className="p-4">
           <div className="flex justify-between items-center border-b-2 border-black dark:border-white pb-3">
             <h1 className="text-xl sm:text-2xl ">Menu</h1>

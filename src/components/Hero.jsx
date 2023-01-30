@@ -1,12 +1,9 @@
 import { useEffect, useState } from "react";
 import { heroProduct } from "../data/index";
-import useBreakpoint from "use-breakpoint";
+
 import Link from "next/link";
 
-const BREAKPOINTS = { mobile: 0, tablet: 768, desktop: 1280 };
-
-const Hero = () => {
-  const { breakpoint, maxWidth, minWidth } = useBreakpoint(BREAKPOINTS, "mobile");
+const Hero = ({ breakpoint }) => {
   const [image, setImage] = useState("");
   const [int, setInt] = useState(0);
   const [caption, setCaption] = useState(" ");
@@ -36,6 +33,7 @@ const Hero = () => {
       }
       return setImage("/iphone-hero.png");
     }
+    console.log(breakpoint);
   }, [breakpoint, image]);
 
   return (

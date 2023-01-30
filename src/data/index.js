@@ -39,3 +39,31 @@ export const heroProduct = [
     img: "/Ipad.png",
   },
 ];
+
+export const products = [
+  {
+    id: "macbook",
+    title: "MACBOOK",
+    img: "/Macbook.png",
+  },
+  {
+    id: "imac",
+    title: "iMac",
+    img: "/Imac.png",
+  },
+  {
+    id: "ipad",
+    title: "iPad",
+    img: "/Ipad.png",
+  },
+  {
+    id: "iphone",
+    title: "iPhone",
+    img: "/Iphone.png",
+  },
+  {
+    id: "accessories",
+    title: "ACCESSORIES",
+    img: "/AirPod.png",
+  },
+];

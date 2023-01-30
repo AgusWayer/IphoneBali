@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { topbarContents } from "../data";
+import { topbarContents } from "../data/index";
 import { BsFillMoonFill, BsFillSunFill } from "react-icons/bs";
 
 const Topbar = ({ dark, setDark, handleDark }) => {
@@ -13,7 +13,7 @@ const Topbar = ({ dark, setDark, handleDark }) => {
               <Link href={content.url}>{content.title}</Link>{" "}
             </li>
           ))}
-          <li>{dark ? <BsFillSunFill onClick={handleDark} /> : <BsFillMoonFill onClick={handleDark} />}</li>
+          <li className="cursor-pointer">{dark ? <BsFillSunFill onClick={handleDark} /> : <BsFillMoonFill onClick={handleDark} />}</li>
         </ul>
       </div>
     </div>

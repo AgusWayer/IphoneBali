@@ -1,13 +1,11 @@
 import Head from "next/head";
-import Body from "./container/Body";
-import Header from "./container/Header";
+import Body from "../src/container/Body";
 import { useState } from "react";
+import useBreakpoint from "use-breakpoint";
 
-export default function Home() {
-  const [dark, setDark] = useState(false);
-  const handleDark = () => {
-    setDark((prev) => !prev);
-  };
+const BREAKPOINTS = { mobile: 0, tablet: 768, desktop: 1280 };
+export default function Home({ dark, setDark, handleDark }) {
+  const { breakpoint, maxWidth, minWidth } = useBreakpoint(BREAKPOINTS, "mobile");
   return (
     <>
       <Head>
@@ -17,8 +15,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${dark ? "dark" : "light"}`}>
-        <Header dark={dark} setDark={setDark} handleDark={handleDark} className />
-        <Body />
+        <Body breakpoint={breakpoint} />
       </main>
     </>
   );

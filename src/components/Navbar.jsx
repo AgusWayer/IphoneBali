@@ -51,7 +51,7 @@ const Navbar = ({ dark, setDark, handleDark }) => {
         </div>
       </div>
 
-      <div className={`absolute top-0 ${offCanvas ? "-translate-x-[15%] " : "-translate-x-[999px]"} w-4/5 md:hidden bg-white dark:bg-black shadow-lg min-h-screenz transition-all p-2 z-10`}>
+      <div className={`absolute top-0 ${offCanvas ? "-translate-x-[15%] " : "-translate-x-[999px]"} w-4/5 md:hidden bg-white dark:bg-black shadow-lg h-screen transition-all p-2 z-10`}>
         <div className="p-4">
           <div className="flex justify-between items-center border-b-2 border-black dark:border-white pb-3">
             <h1 className="text-xl sm:text-2xl ">Menu</h1>

@@ -20,7 +20,7 @@ const Footer = () => {
     },
   ];
   return (
-    <div>
+    <div className="border-t-2 border-t-black dark:border-t-white ">
       <div className="grid md:grid-cols-3 grid-cols-1 p-5 md:mr-8 ">
         <div className="text-center">
           <h1 className="font-semibold text-2xl md:text-3xl">Contact Us</h1>

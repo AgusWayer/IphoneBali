@@ -10,7 +10,7 @@ export default function App({ Component, pageProps }) {
   return (
     <div className={`${dark ? "dark" : ""}`}>
       <Header dark={dark} setDark={setDark} handleDark={handleDark} />
-      <Component {...pageProps} dark={dark} setDark={setDark} handleDark={handleDark} />;
+      <Component {...pageProps} dark={dark} setDark={setDark} handleDark={handleDark} />
     </div>
   );
 }

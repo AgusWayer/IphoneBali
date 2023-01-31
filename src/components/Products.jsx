@@ -58,7 +58,8 @@ const Products = ({ breakpoint }) => {
               return (
                 <>
                   {products.map((product, index) => (
-                    <div key={product.title} className={`my-5  text-center ${index == products.length - 1 ? "col-span-2" : ""} flex flex-col items-center justify-center`}>
+                    <div key={product.title} className={`my-5  text-center ${index == products.length - 1 ? "col-span-2" : ""} flex flex-col items-center justify-center `}>
+                      <div></div>
                       <Link href={`/product/${product.id}`}>
                         <img src={product.img} alt="" className=" scale-100 mx-auto hover:scale-105 transition-all" />
                         <h1 className="my-5 font-semibold text-xl hover:scale-105 transition-all">{product.title}</h1>

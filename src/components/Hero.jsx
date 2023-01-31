@@ -33,7 +33,6 @@ const Hero = ({ breakpoint }) => {
       }
       return setImage("/iphone-hero.png");
     }
-    console.log(breakpoint);
   }, [breakpoint, image]);
 
   return (

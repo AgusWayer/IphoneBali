@@ -67,3 +67,30 @@ export const products = [
     img: "/AirPod.png",
   },
 ];
+
+export const aboutUs = [
+  {
+    title: "Collection Point",
+    url: "/collectionpoints",
+  },
+  {
+    title: "How To Point",
+    url: "/howtopoint",
+  },
+  {
+    title: "Confirm Order",
+    url: "/confirmorder",
+  },
+  {
+    title: "Term and Condition",
+    url: "/termscondition",
+  },
+  {
+    title: "Terms of Use",
+    url: "/termsuse",
+  },
+  {
+    title: "Privacy Policy",
+    url: "/privacypolicy",
+  },
+];
